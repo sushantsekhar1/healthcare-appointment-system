@@ -94,7 +94,7 @@ const Header = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="flex justify-center px-4 sm:px-6 md:px-12 py-12">
+    <div className="flex- justify-center px-4 sm:px-6 md:px-12 py-12">
       <div
         className={`w-full max-w-7xl rounded-3xl p-8 sm:p-12 md:p-16 flex flex-col md:flex-row items-center gap-10 transition-colors duration-300 ${
           theme === "dark"
