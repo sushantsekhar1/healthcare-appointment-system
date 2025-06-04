@@ -204,21 +204,22 @@ const Navbar = () => {
   return (
     <nav className="bg-white dark:bg-gray-800 px-6 py-4 flex justify-between items-center shadow-md relative">
       {/* Logo + Title */}
-      <div className="flex items-center space-x-3">
-        <img
-          src={darkMode ? darklogo : lightlogo}
-          alt="HealthMate Logo"
-          className="w-10 h-10 object-contain"
-        />
-        <h1 className="text-2xl font-bold text-black dark:text-white flex items-center">
-          Health
-          <span className="bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent ml-1 group hover:animate-pulse transition duration-300">
-            Mate
-          </span>
-        </h1>
-      </div>
-
-      {/* Desktop Menu */}
+        <div
+          className="flex items-center space-x-3 cursor-pointer"
+          onClick={() => window.location.pathname !== '/' && window.location.assign('/')}
+        >
+          <img
+            src={darkMode ? darklogo : lightlogo}
+            alt="HealthMate Logo"
+            className="w-10 h-10 object-contain"
+          />
+          <h1 className="text-2xl font-bold text-black dark:text-white flex items-center">
+            Health
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent ml-1 group hover:animate-pulse transition duration-300">
+          Mate
+            </span>
+          </h1>
+        </div>
       <ul className="hidden md:flex space-x-6 text-black dark:text-white font-medium">
         <li><Link to="/" className="hover:text-blue-600 dark:hover:text-blue-300">Home</Link></li>
         <li><Link to="/doctors" className="hover:text-blue-600 dark:hover:text-blue-300">All Doctor</Link></li>
